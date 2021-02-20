@@ -1,8 +1,8 @@
-// @ts-nocheck
 const vscode = require('vscode');
 const axios = require("axios");
 const fastXmlParser = require("fast-xml-parser");
 const puppeteer = require("puppeteer");
+const { Uri } = require('vscode');
 
 // this method is called when your extension is activated
 // your extension is activated the very first time the command is executed
@@ -37,7 +37,7 @@ async function activate(context) {
 		if(!selectedArticle) {
 			return;
 		}
-		//vscode.env.openExternal(selectedArticle.link);
+		//vscode.env.openExternal(Uri.parse(`${selectedArticle.link}`));
 
 		const htmlContent = await getWebviewContent(selectedArticle.link);
 		console.log(htmlContent);

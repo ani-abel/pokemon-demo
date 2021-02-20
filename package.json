@@ -2,6 +2,10 @@
   "name": "pokemon-demo",
   "publisher": "AbelAni",
   "displayName": "pokemon-demo",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ani-abel/pokemon-demo.git"
+  },
   "description": "",
   "version": "0.0.1",
   "engines": {
